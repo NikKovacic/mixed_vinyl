@@ -22,4 +22,32 @@ return [
     '@symfony/stimulus-bundle' => [
         'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
+    'bootstrap' => [
+        'version' => '5.3.3',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
+    ],
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
+    ],
+    '@fortawesome/fontawesome-free' => [
+        'version' => '6.5.2',
+    ],
+    '@fortawesome/fontawesome-free/css/fontawesome.min.css' => [
+        'version' => '6.5.2',
+        'type' => 'css',
+    ],
+    '@fortawesome/fontawesome-free/css/all.css' => [
+        'version' => '6.5.2',
+        'type' => 'css',
+    ],
+    '@fontsource-variable/roboto-condensed' => [
+        'version' => '5.0.3',
+    ],
+    '@fontsource-variable/roboto-condensed/index.min.css' => [
+        'version' => '5.0.3',
+        'type' => 'css',
+    ],
 ];
