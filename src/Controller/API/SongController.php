@@ -8,8 +8,8 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class SongController extends AbstractController
 {
-    #[Route('/api/songs/{id}', name: 'app_api_song_getsong', methods: ['GET'])]
-    public function getSong($id): Response
+    #[Route('/api/songs/{id<\d+>}', name: 'app_api_song_getsong', methods: ['GET'])]
+    public function getSong(int $id): Response
     {
         // TODO: query the database.
         $song = [
