@@ -53,4 +53,7 @@ return [
     'axios' => [
         'version' => '1.6.8',
     ],
+    '@hotwired/turbo' => [
+        'version' => '7.3.0',
+    ],
 ];
