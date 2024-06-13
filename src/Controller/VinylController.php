@@ -11,7 +11,7 @@ use function Symfony\Component\String\u;
 
 class VinylController extends AbstractController
 {
-    #[Route('/', name: 'app_vinyl_homepage')]
+    #[Route('/', name: 'app_vinyl_homepage', methods: ['GET'])]
     public function homepage(): Response
     {
         $tracks = [
@@ -29,7 +29,7 @@ class VinylController extends AbstractController
         ]);
     }
 
-    #[Route('/browse/{slug}', name: 'app_vinyl_browse')]
+    #[Route('/browse/{slug}', name: 'app_vinyl_browse', methods: ['GET'])]
     public function browse(VinylMixRepository $mixRepository, ?string $slug = null): Response
     {
         $genre = $slug ? u(str_replace('-', ' ', $slug))->title(true) : null;
