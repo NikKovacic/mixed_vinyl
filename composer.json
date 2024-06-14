@@ -32,6 +32,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.6",
         "friendsofphp/php-cs-fixer": "^3.56",
         "symfony/debug-bundle": "7.0.*",
         "symfony/maker-bundle": "^1.59",
