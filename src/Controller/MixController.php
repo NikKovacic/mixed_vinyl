@@ -45,14 +45,16 @@ class MixController extends AbstractController
     {
         $direction = $request->get('direction', 'up');
         if ('up' === $direction) {
-            $mix->setVotes($mix->getVotes() + 1);
+            $mix->upVote();
         } else {
-            $mix->setVotes($mix->getVotes() - 1);
+            $mix->downVote();
         }
 
         // Persist is redundant because mix object already exist!
         // $entityManager->persist($mix);
         $entityManager->flush();
+
+        $this->addFlash('success', 'Vote counted!');
 
         return $this->redirectToRoute('app_mix_show', [
             'id' => $mix->getId(),
